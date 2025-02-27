@@ -10,11 +10,11 @@ import CartProductItem from "./cart-procuct-item";
 import FinishOrderDialog from "./finish-order-dialog";
 
 const CartSheet = () => {
-    const {isOpen,total,toogleCart, products} = useContext(CartContext)
+    const {isOpen,total,toggleCart, products} = useContext(CartContext)
     const [finishOrderDialogIsOpen, setFinishDialogIsOpen] = useState(false)
 
     return ( 
-        <Sheet open={isOpen} onOpenChange={toogleCart}>
+        <Sheet open={isOpen} onOpenChange={toggleCart}>
   <SheetContent className="w-[85%]">
     <SheetHeader>
       <SheetTitle className="text-left">Sacola</SheetTitle>
