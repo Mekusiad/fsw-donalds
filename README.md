@@ -23,34 +23,6 @@ O objetivo é reduzir filas, melhorar a experiência do usuário e otimizar o te
 - Cálculo automático de preços
 - Interface responsiva apenas para dispositivos móveis
 
-## Como Executar o Projeto
-
-### Requisitos
-
-- Node.js instalado (se aplicável)
-- Banco de dados configurado
-
-### Passos
-
-1. Clone este repositório:
-   ```sh
-   git clone git@github.com:Mekusiad/fsw-donalds.git
-   ```
-2. Entre no diretório do projeto:
-   ```sh
-   cd fsw-donald
-   ```
-3. Instale as dependências:
-   ```sh
-   npm install
-   ```
-4. Configure as variáveis de ambiente (se necessário)
-5. Inicie o servidor:
-   ```sh
-   npm start
-   ```
-6. Acesse o sistema no navegador: `http://localhost:3000`
-
 
 ## Contato
 
