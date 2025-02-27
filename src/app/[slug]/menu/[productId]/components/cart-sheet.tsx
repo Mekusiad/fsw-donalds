@@ -22,9 +22,11 @@ const CartSheet = () => {
     </SheetHeader>
     <div className="py-5 flex flex-col h-full">
    <div className="flex-auto space-y-2">
-   {products.map((product)=>(
+   {products.length> 0 ? products.map((product)=>(
       <CartProductItem key={product.id} product={product}/>
-    ))}
+    )):
+    <div className="text-sm text-muted-foreground">Sacola vazia no momento.</div>
+    }
    </div>
    <Card className="mb-6">
     <CardContent className="p-5">
@@ -35,6 +37,7 @@ const CartSheet = () => {
     </CardContent>
    </Card>
    <Button className="w-full rounded-full"
+   disabled={products.length<=0}
    onClick={()=>setFinishDialogIsOpen(true)}
    >Finalizar pedido</Button>
     </div>

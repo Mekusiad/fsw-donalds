@@ -56,7 +56,7 @@ const OrderList = ({ orders }: OrderListProps) => {
         <ScrollTextIcon />
         <h2 className="text-lg font-semibold">Meus Pedidos</h2>
       </div>
-      {orders.map((order) => (
+      {orders.length > 0 ? orders.map((order) => (
         <Card key={order.id}>
           <CardContent className="space-y-4 p-5">
             <div
@@ -85,12 +85,15 @@ const OrderList = ({ orders }: OrderListProps) => {
                   <p className="text-sm">{orderProduct.product.name}</p>
                 </div>
               ))}
+              
             </div>
             <Separator />
             <p className="text-sm font-medium">{formatCurrency(order.total)}</p>
           </CardContent>
         </Card>
-      ))}
+      )):
+      <div className="text-muted-foreground">Nenhum pedido registrado no momento. </div>
+      }
     </div>
   );
 };
